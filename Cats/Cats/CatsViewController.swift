@@ -73,11 +73,16 @@ class CatsViewController: UIViewController {
     }
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           let webViewController = segue.destination as! ImageViewController
-           if let url = catImageURLT {
-            webViewController.viewImageUrl = url
-           }
-       }
+         if segue.identifier == "Description" {
+             if let indexPath = self.tableView.indexPathForSelectedRow {
+                 let cat = cats[indexPath.row]
+                 let imageVC = segue.destination as! ImageViewController
+                 if let url = cat.imageUrl {
+                     imageVC.viewImageUrl = url
+                 }
+             }
+         }
+     }
     
 }
 // MARK: Table View Data Source
@@ -105,14 +110,6 @@ extension CatsViewController: UITableViewDelegate {
         return 100
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let catT = cats[indexPath.row]
-        
-        catImageURLT = catT.imageUrl
-        
-        performSegue(withIdentifier: "Description", sender: self)
-    }
-    
+   
 }
 

@@ -85,6 +85,20 @@ class TESTCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UICollectionViewCell,
+        let indexPath = self.collectionView.indexPath(for: cell) {
+                let cat = cats[indexPath.row]
+                let imageVC = segue.destination as! ImageViewController
+                if let url = cat.imageUrl {
+                    imageVC.viewImageUrl = url
+                }
+            }
+        
+    }
+    
+    
+    
     // MARK: UICollectionViewDelegate
     
     /*
@@ -110,7 +124,7 @@ class TESTCollectionViewController: UICollectionViewController {
      override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
      return false
      }
-     
+     /
      override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
      
      }

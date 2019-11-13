@@ -17,6 +17,7 @@ class ImageViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        //print(viewImageUrl)
         fetchImage()
        /*
         DispatchQueue.global().async {
