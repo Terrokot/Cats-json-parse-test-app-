@@ -29,7 +29,6 @@ class ImageViewController: UIViewController {
             }
         }
  */
-        print(viewImageUrl)
 
 
     }

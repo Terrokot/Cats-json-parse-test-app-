@@ -19,7 +19,7 @@ class TESTCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
            super.viewDidLoad()
-           
+         
            fetchData()
            
            
@@ -28,7 +28,7 @@ class TESTCollectionViewController: UICollectionViewController {
        
        func fetchData() {
            
-           let jsonUrlString = "https://api.myjson.com/bins/ykvm2"
+           let jsonUrlString = "https://api.myjson.com/bins/6cc0e"
            
            guard let url = URL(string: jsonUrlString) else { return }
            
@@ -82,8 +82,10 @@ class TESTCollectionViewController: UICollectionViewController {
                     cell.testImage.image = UIImage(data: imageData)
                    }
                }
+        
         return cell
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UICollectionViewCell,
@@ -130,4 +132,24 @@ class TESTCollectionViewController: UICollectionViewController {
      }
      */
     
+}
+
+extension TESTCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let yourWidth = collectionView.bounds.width/3.0
+        let yourHeight = yourWidth
+
+        return CGSize(width: yourWidth, height: yourHeight)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }

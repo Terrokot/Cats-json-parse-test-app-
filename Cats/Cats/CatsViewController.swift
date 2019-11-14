@@ -27,7 +27,7 @@ class CatsViewController: UIViewController {
     
     func fetchData() {
         
-        let jsonUrlString = "https://api.myjson.com/bins/ykvm2"
+        let jsonUrlString = "https://api.myjson.com/bins/6cc0e"
         
         guard let url = URL(string: jsonUrlString) else { return }
         

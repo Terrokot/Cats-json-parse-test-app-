@@ -68,7 +68,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="ujY-E5-qYu" secondAttribute="trailing" id="1Nw-b7-Eao"/>
                                                 <constraint firstAttribute="bottom" secondItem="lHE-ks-5VD" secondAttribute="bottom" constant="59" id="6Ee-0f-Hzn"/>
                                                 <constraint firstItem="ujY-E5-qYu" firstAttribute="bottom" secondItem="jap-CH-QMo" secondAttribute="bottomMargin" id="8PB-Dd-eGU"/>
-                                                <constraint firstAttribute="bottom" secondItem="OJd-Uv-4C8" secondAttribute="bottom" id="Iom-0Q-a3h"/>
+                                                <constraint firstAttribute="bottom" secondItem="OJd-Uv-4C8" secondAttribute="bottom" constant="2" id="Iom-0Q-a3h"/>
                                                 <constraint firstItem="OJd-Uv-4C8" firstAttribute="leading" secondItem="jap-CH-QMo" secondAttribute="leading" id="Iv7-v5-qPQ"/>
                                                 <constraint firstItem="OJd-Uv-4C8" firstAttribute="top" secondItem="jap-CH-QMo" secondAttribute="top" id="M5G-xT-1dL"/>
                                                 <constraint firstItem="lHE-ks-5VD" firstAttribute="top" secondItem="jap-CH-QMo" secondAttribute="top" id="Mzp-DJ-sfB"/>
@@ -184,7 +184,7 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TestCell" id="tdy-f5-axe" customClass="CollectionViewCell" customModule="Cats" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="125" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Yow-dt-qeR">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8S5-qz-gMW">
                                     <rect key="frame" x="0.0" y="0.0" width="125" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -194,8 +194,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="OQR-9p-MY9" secondAttribute="trailing" id="7Ev-KB-z2R"/>
-                                        <constraint firstItem="OQR-9p-MY9" firstAttribute="leading" secondItem="Yow-dt-qeR" secondAttribute="leading" id="JaK-ja-k1u"/>
-                                        <constraint firstItem="OQR-9p-MY9" firstAttribute="top" secondItem="Yow-dt-qeR" secondAttribute="top" id="e8v-ct-CqS"/>
+                                        <constraint firstItem="OQR-9p-MY9" firstAttribute="leading" secondItem="8S5-qz-gMW" secondAttribute="leading" id="JaK-ja-k1u"/>
+                                        <constraint firstItem="OQR-9p-MY9" firstAttribute="top" secondItem="8S5-qz-gMW" secondAttribute="top" id="e8v-ct-CqS"/>
                                         <constraint firstAttribute="bottom" secondItem="OQR-9p-MY9" secondAttribute="bottom" id="gWN-v0-L1o"/>
                                     </constraints>
                                 </collectionViewCellContentView>
