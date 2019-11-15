@@ -68,18 +68,42 @@
 			children = (
 				917BE53B237B44790071E716 /* AppDelegate.swift */,
 				917BE53D237B44790071E716 /* SceneDelegate.swift */,
-				917BE55F237BD6D60071E716 /* TESTCollectionViewController.swift */,
-				917BE551237B464A0071E716 /* CatsViewController.swift */,
-				917BE55B237B61400071E716 /* CollectionViewCell.swift */,
-				917BE553237B47880071E716 /* ImageViewController.swift */,
-				917BE557237B482B0071E716 /* TableViewCell.swift */,
-				917BE555237B48090071E716 /* JsonDataModel.swift */,
+				917BE561237EF2DC0071E716 /* Controllers */,
+				917BE565237EF3770071E716 /* Cells */,
+				917BE563237EF3330071E716 /* Networking */,
 				917BE541237B44790071E716 /* Main.storyboard */,
 				917BE544237B447C0071E716 /* Assets.xcassets */,
 				917BE546237B447C0071E716 /* LaunchScreen.storyboard */,
 				917BE549237B447C0071E716 /* Info.plist */,
 			);
 			path = Cats;
+			sourceTree = "<group>";
+		};
+		917BE561237EF2DC0071E716 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				917BE55F237BD6D60071E716 /* TESTCollectionViewController.swift */,
+				917BE551237B464A0071E716 /* CatsViewController.swift */,
+				917BE553237B47880071E716 /* ImageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		917BE563237EF3330071E716 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				917BE555237B48090071E716 /* JsonDataModel.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		917BE565237EF3770071E716 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				917BE55B237B61400071E716 /* CollectionViewCell.swift */,
+				917BE557237B482B0071E716 /* TableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3379Y22T2W;
 				INFOPLIST_FILE = Cats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3379Y22T2W;
 				INFOPLIST_FILE = Cats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

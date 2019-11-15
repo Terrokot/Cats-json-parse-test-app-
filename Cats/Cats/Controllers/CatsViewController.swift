@@ -58,7 +58,7 @@ class CatsViewController: UIViewController {
         }
         
         if let discription = cat.description {
-            cell.catDiscription.text = "Discription: \(discription)"
+            cell.catDiscription.text = discription
         }
         
         DispatchQueue.global().async {
