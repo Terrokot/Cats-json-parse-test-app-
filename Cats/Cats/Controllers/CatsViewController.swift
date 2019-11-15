@@ -51,15 +51,13 @@ class CatsViewController: UIViewController {
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
         
         let cat = cats[indexPath.row]
-        cell.catTitle.text = cat.title
+        cell.catTitle.text = cat.title ?? ""
         
         if let id = cat.id{
             cell.id.text = "id: \(id)"
         }
         
-        if let discription = cat.description {
-            cell.catDiscription.text = discription
-        }
+        cell.catDiscription.text = cat.description ?? ""
         
         DispatchQueue.global().async {
             guard let imageUrl = URL(string: cat.imageUrl!) else { return }
