@@ -83,6 +83,11 @@ class TESTCollectionViewController: UICollectionViewController {
         flowLayout.invalidateLayout()
     }
     
+    //MARK: Navigation
+    override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          navigationController?.setNavigationBarHidden(true, animated: animated)
+      }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UICollectionViewCell,

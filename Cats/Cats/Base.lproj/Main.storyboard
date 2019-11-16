@@ -129,13 +129,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-5k-BT7">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ova-Wh-ps2">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <connections>
+                                    <action selector="toggle:" destination="urq-Yv-9cv" eventType="touchUpInside" id="b85-1U-fot"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qen-81-iFq" firstAttribute="trailing" secondItem="Ova-Wh-ps2" secondAttribute="trailing" id="1II-71-fCn"/>
                             <constraint firstItem="qen-81-iFq" firstAttribute="bottom" secondItem="Ne4-5k-BT7" secondAttribute="bottom" id="Chq-wd-2mw"/>
+                            <constraint firstItem="Ova-Wh-ps2" firstAttribute="top" secondItem="qen-81-iFq" secondAttribute="top" id="SKO-pn-mNv"/>
                             <constraint firstItem="Ne4-5k-BT7" firstAttribute="top" secondItem="qen-81-iFq" secondAttribute="top" id="Yef-54-sQR"/>
                             <constraint firstItem="Ne4-5k-BT7" firstAttribute="leading" secondItem="qen-81-iFq" secondAttribute="leading" id="aso-I7-91q"/>
+                            <constraint firstItem="Ova-Wh-ps2" firstAttribute="leading" secondItem="qen-81-iFq" secondAttribute="leading" id="lw5-vC-Jbx"/>
                             <constraint firstItem="qen-81-iFq" firstAttribute="trailing" secondItem="Ne4-5k-BT7" secondAttribute="trailing" id="o6z-zP-oTx"/>
+                            <constraint firstItem="qen-81-iFq" firstAttribute="bottom" secondItem="Ova-Wh-ps2" secondAttribute="bottom" id="x2b-gy-7zt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qen-81-iFq"/>
                     </view>
@@ -180,11 +190,43 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="x7o-Qk-Pzh"/>
                         <segue destination="Kvv-Gq-Zw5" kind="relationship" relationship="viewControllers" id="dJ3-P8-t8D"/>
+                        <segue destination="iNf-ip-3Rh" kind="relationship" relationship="viewControllers" id="dWs-9Y-fPL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IzK-tq-DKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="857" y="130"/>
+        </scene>
+        <!--info-->
+        <scene sceneID="suf-qx-3eP">
+            <objects>
+                <viewController id="iNf-ip-3Rh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tit-VZ-hGf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Cats:   " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kez-zF-9X4">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1ac-LJ-v6d" firstAttribute="bottom" secondItem="kez-zF-9X4" secondAttribute="bottom" id="FOZ-JF-sae"/>
+                            <constraint firstItem="kez-zF-9X4" firstAttribute="top" secondItem="1ac-LJ-v6d" secondAttribute="top" id="L5V-Xi-S0n"/>
+                            <constraint firstItem="1ac-LJ-v6d" firstAttribute="trailing" secondItem="kez-zF-9X4" secondAttribute="trailing" id="Wab-8E-uwH"/>
+                            <constraint firstItem="kez-zF-9X4" firstAttribute="leading" secondItem="1ac-LJ-v6d" secondAttribute="leading" id="z01-O6-q76"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1ac-LJ-v6d"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="info" id="Jit-Ie-3C6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWT-ap-4ey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="-683"/>
         </scene>
         <!--collection-->
         <scene sceneID="Zoa-ce-76G">

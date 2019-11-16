@@ -12,12 +12,20 @@ class ImageViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
     
- 
-    @IBOutlet var navigationBar: UINavigationItem!
-    
-    
-    
     var viewImageUrl = ""
+    
+    @IBAction func toggle(_ sender: UIButton) {
+        navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
+               }
+
+               override var prefersStatusBarHidden: Bool {
+                   return navigationController?.isNavigationBarHidden == true
+               }
+
+               override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+                   return UIStatusBarAnimation.slide
+    }
+   
         
     override func viewDidLoad() {
         super.viewDidLoad()
