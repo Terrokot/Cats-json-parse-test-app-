@@ -21,7 +21,6 @@ class CatsViewController: UIViewController {
         
         fetchData()
         
-        
     }
     
     
@@ -71,6 +70,11 @@ class CatsViewController: UIViewController {
     }
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let backItem = UIBarButtonItem()
+            backItem.title = "table"
+        self.navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+    
          if segue.identifier == "Description" {
              if let indexPath = self.tableView.indexPathForSelectedRow {
                  let cat = cats[indexPath.row]

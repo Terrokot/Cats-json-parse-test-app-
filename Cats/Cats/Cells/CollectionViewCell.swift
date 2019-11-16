@@ -10,9 +10,6 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet var testImage: UIImageView!
-    //@IBOutlet var catImage: UIImageView!
-    
     
 }

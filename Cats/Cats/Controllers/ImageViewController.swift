@@ -10,27 +10,18 @@ import UIKit
 
 class ImageViewController: UIViewController {
     
-    
     @IBOutlet var imageView: UIImageView!
+    
+ 
+    @IBOutlet var navigationBar: UINavigationItem!
+    
+    
     
     var viewImageUrl = ""
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(viewImageUrl)
         fetchImage()
-       /*
-        DispatchQueue.global().async {
-            guard let imageUrl = URL(string: self.viewImageUrl) else { return }
-            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-            
-            DispatchQueue.main.async {
-                self.imageView.image = UIImage(data: imageData)
-            }
-        }
- */
-
-
     }
     
     func fetchImage() {
