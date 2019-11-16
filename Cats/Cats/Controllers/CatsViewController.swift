@@ -69,7 +69,10 @@ class CatsViewController: UIViewController {
         
     }
     //MARK: Navigation 
- 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

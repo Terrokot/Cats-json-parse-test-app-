@@ -27,7 +27,6 @@ class ImageViewController: UIViewController {
                    return UIStatusBarAnimation.slide
     }
     
-   
         
     override func viewDidLoad() {
         super.viewDidLoad()
