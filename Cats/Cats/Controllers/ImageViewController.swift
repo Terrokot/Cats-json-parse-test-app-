@@ -14,6 +14,7 @@ class ImageViewController: UIViewController {
     
     var viewImageUrl = ""
     
+    
     @IBAction func toggle(_ sender: UIButton) {
         navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
                }
@@ -25,6 +26,7 @@ class ImageViewController: UIViewController {
                override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
                    return UIStatusBarAnimation.slide
     }
+    
    
         
     override func viewDidLoad() {
@@ -32,6 +34,7 @@ class ImageViewController: UIViewController {
         fetchImage()
     }
     
+
     func fetchImage() {
         
         guard let url = URL(string: viewImageUrl) else { return }
